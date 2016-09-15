@@ -1,11 +1,9 @@
-  $(document).ready(function(){
-        $('.log-btn').click(function(){
-            $('.log-status').addClass('wrong-entry');
-           $('.alert').fadeIn(500);
-           setTimeout( "$('.alert').fadeOut(1500);",3000 );
-        });
-        $('.form-control').keypress(function(){
-            $('.log-status').removeClass('wrong-entry');
-        });
+/*
+Originally found at http://cssdeck.com/labs/login-form-using-html5-and-css3
 
-    });
+by: http://cssdeck.com/user/kamalchaneman
+
+
+
+
+*/
