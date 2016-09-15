@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="faceplus" ng-controller="face">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input ng-model="url">
+<button ng-click="genrate()">face</button>
+<div>
+    Age: {{result.value}}
+    Gender:{{result1.value}}
+</div>
+<style>
+    body{
+        background-image: url("image2.jpg");
+    }
+</style>
+<img src="" id="result">
+</body>
+</div>
+
+
+<script>
+    var app = angular.module('faceplus', []);
+    app.controller('face', function($scope, $http) {
+        $scope.genrate = function () {
+
+            var api ="http://apius.faceplusplus.com/v2/detection/detect?api_key=28b0bb3c15498c2a50c121ef734bf6f0&api_secret=jERvGC5mZKzPO-fsUaRgzT2jAffarSEb%20&url="+$scope.url+"&attribute=age,gender"
+            $http.get(api).success(function (data) {
+                $scope.result = data.face[0].attribute.age;
+                $scope.result1 = data.face[0].attribute.gender;
+
+                console.log(result);
+
+                var key=$scope.url;
+                document.getElementById("result").src = "https://api.qrserver.com/v1/create-qr-code/?data=" + key +"&amp;size=100x100" ;
+            })
+        }
+    });
+</script>
+
+
+</html>
