@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="myflicker" ng-controller="myctrl">
+
+
+
+<input  ng-model="search">
+
+<button ng-click="myctrl()" >search</button>
+
+<table>
+
+    <tr ng-repeat="picture in result.photos.photo" >
+        <td>
+            <img ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}.jpg" height="100" width="100">
+        </td>
+    </tr>
+
+</table>
+
+</body>
+
+<script>
+    var app = angular.module('myflicker', []);
+    app.controller('myctrl', function($scope, $http) {
+        $scope.myctrl = function () {
+
+            var api = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=36bd422defaf495f500542567ea0311b&text=" + $scope.search + "&format=json&nojsoncallback=1"
+            $http.get(api).success(function (data) {
+                $scope.result = data;
+            })
+        }
+    });
+</script>
+
+
+
+</html>
+
+
+
