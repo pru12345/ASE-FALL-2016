@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+</head>
+
+
+
+
+
+
+<ion-pane>
+
+    <body ng-app="myflicker" ng-controller="myctrl" >
+    <br></br>
+
+    <input class="bar-positive" ng-model="search">
+
+    <button  class="bar-positive" ng-click="myctrl1()" >search</button>
+
+    <table class="list">
+
+      <tr ng-repeat="picture in result.photos.photo" >
+        <td>
+          <img  class="item" ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}.jpg" height="200" width="400">
+
+        </td>
+
+      </tr>
+
+    </table>
+
+    <a   class= class="bar-positive"  href="index2.html"> next </a>
+
+</ion-pane>
+
+</body>
+
+<script>
+  var app = angular.module('myflicker', []);
+  app.controller('myctrl', function($scope, $http) {
+    $scope.myctrl1 = function () {
+      var api = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=36bd422defaf495f500542567ea0311b&text=" + $scope.search + "&format=json&nojsoncallback=1"
+      $http.get(api).success(function (data) {
+        $scope.result = data;
+      var picture = result.photos.photo
+
+      })
+    }
+  });
+</script>
+
+</html>

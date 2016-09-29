@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body ng-app="temp" ng-controller="find">
+
+
+<input class="bar-positive" ng-model="URL1" >
+<button  class="bar-positive" ng-click="getdetails()">gender and age</button>
+<img src="http://media2.intoday.in/indiatoday/images/stories/msd_fbsport_647_061616104643.jpg">
+<br>
+age= 28 gender= male
+</br>
+</body>
+
+<script>
+    var app = angular.module('temp', []);
+    app.controller('find', function($scope, $http)
+    {
+        getdetails: function() {
+            apikey:"28b0bb3c15498c2a50c121ef734bf6f0"
+            Demokey:"jERvGC5mZKzPO-fsUaRgzT2jAffarSEb"
+
+          var api = "http://apius.faceplusplus.com/v2/detection/detect?api_key="+apikey+"&api_secret="+Demokey+"&url="+URL1+"&attribute=age%2Cgender%2Crace%2Csmiling%2Cpose%2Cglass"
+            $http.get(api).success(function(data)
+            {
+                $scope.result = data;
+
+            })
+
+        }
+
+    });
+
+
+</script>
+
+</html>
