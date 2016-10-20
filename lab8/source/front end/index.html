@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="b2">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet"  type="text/css" href="index_CSS.css">
+    <title>Convert</title>
+</head>
+<body ng-app=convertapp>
+<div class="b1" align="center">
+    <div style="color:#2aabd2"><h1>Conversions</h1></div>
+<div ng-controller=convertctrl align="center">
+    <div class="ib">
+        <div style="color:#2aabd2">  <h3>Cm to Foot and Inches</h3></div>
+    <input type="text" style="border:1px solid #2aabd2" ng-model="F" class="c1" >
+        <input type="button" class="button" style="background-color:#2aabd2" value="Convert" ng-click="convertg()" style="background-color:rosybrown">
+    <div style="color:#2aabd2"></divstyle> <p ng-model=convertcon class="b3">
+          cm in foot :  {{convertcon.foot}}<br>
+          cm in inches:  {{convertcon.inches}}<br>
+
+    </p></div>
+    </div>
+</div>
+</div>
+</body>
+</html>
