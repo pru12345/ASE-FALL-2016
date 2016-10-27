@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="faceplus" ng-controller="face">
+<head>
+    <title>Title</title>
+</head>
+<link rel="stylesheet"  type="text/css" href="index_CSS.css">
+<body background="back.jpg">
+
+<div class="b2">
+    mashup
+    </div>
+<div class="b1" align="center">
+
+    <input ng-model="search">
+    <button ng-click="genrate()">search</button>
+    <img src="" id="result"><br>
+    Age: {{res}}<br>
+    Gender:{{res1}}<br>
+</div>
+
+
+
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script src="app.js"></script>
+</html>
