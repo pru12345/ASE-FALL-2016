@@ -1,0 +1,55 @@
+.h1{
+    background-image: url("cool.jpg");
+    background-size: cover;
+    color: whitesmoke;
+    font-family: "Cambria";
+    font-size: medium;
+}
+.g1{
+
+    color: white;
+    margin-left: 40px;
+    margin-right: 60px;
+}
+.h5{
+    margin-left: 40px;
+}
+.i1{
+    background-color: grey;
+  border: 1px solid white;
+  height: 50px;
+  width: 100px;
+  border-radius: 0px;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.textbox2{
+    border-style: grey;
+    border-color: grey;
+    font-size:13pt;
+    height:20px;
+    width:300px;
+}
+
+.textbox1{
+    border-style: solid;
+    border-color: grey;
+    font-size:13pt;
+    height:20px;
+    width:300px;
+}
+.fl1{
+    float: left;
+    margin-left: 40px;
+}
+.fl2{
+    float: right;
+    margin-right: 60px;
+}

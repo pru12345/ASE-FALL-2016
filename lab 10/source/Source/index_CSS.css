@@ -1,0 +1,115 @@
+.h1{
+    font-family: "Cambria";
+    background-image: url("cool.jpg");
+    background-size: cover;
+    color: whitesmoke;
+    font-size: medium;
+}
+
+.header{
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 255px);
+  z-index: 2;
+}
+
+.header div{
+  float: left;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.header div span{
+  color: #5379fa !important;
+}
+.b1{
+
+    margin-top: 60px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.b2{
+    margin-left: 150px;
+
+}
+.b3{
+    margin-left: 150px;
+    margin-top: -15px;
+
+
+}
+.f1{
+    margin-top: -15px;
+}
+.f2{
+    margin-top: -15px;
+}
+.f3{
+    margin-top: -15px;
+}
+.f4{
+    margin-top: -15px;
+}
+.f5{
+    margin-top: -15px;
+}
+.f6{
+    margin-top: -5px;
+
+}
+.a1{
+
+}
+.textbox1{
+    border-style: solid;
+    border-color: grey;
+    font-size:13pt;
+    height:25px;
+    width:300px;
+}
+
+.textbox2{
+    border-style: solid;
+    border-color: grey;
+    font-size:13pt;
+    height:25px;
+    width:300px;
+}
+.button {
+    background-color: grey;
+
+  height: 50px;
+  width: 100px;
+
+  border: 1px solid white;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+#rcorners1 {
+
+}
+
+#rcorners2 {
+
+}
+
+.row
+{
+  padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 350px;
+  text-align: center;
+  color: #4d4d4d;
+  background: url("img1.jpg") no-repeat center center;
+  background-size: cover;
+}

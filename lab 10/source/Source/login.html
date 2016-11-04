@@ -1,0 +1,36 @@
+<html ng-app="demoMongo" ng-controller="MongoRestController" class="h1">
+<head >
+  <title>Login</title>
+
+</head>
+<body>
+<div class="b1">
+  <form class="contact_form"  ng-submit="insertData()" name="contact_form">
+    <div class="b2">
+      <h1 >Login</h1><br>
+      <div class="f1"><span class="form_hint"></span>
+        <div class="a1"> <input type="text" class="textbox1" name="fname" placeholder="User Name" ng-model="formData.fname" required /></div>
+        <br><br></div>
+
+      <div class="f4"> <span class="form_hint"></span>
+        <div class="a1"> <input type="password" name="password" class="textbox2" ng-model="formData.password" placeholder="Password"></div>
+        <br></div>
+
+      <div class="f6"> <input type="submit" text-align="center" class="button" name="Sign In"  value="Login" onclick="go()"/></div>
+    </div>
+  </form>
+
+    <script>
+      function go() {
+        window.location='Users.html';
+      }
+    </script>
+  </div>
+
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" href="index_CSS.css" type="text/css">
+</body>
+</html>
